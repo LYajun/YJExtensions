@@ -6,7 +6,7 @@
 1、集成:
 
 ```
-pod 'LGTalk'
+pod 'YJExtensions'
 ```
 
 2、扩展类
