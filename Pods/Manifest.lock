@@ -1,0 +1,16 @@
+PODS:
+  - TFHpple (2.0.0)
+
+DEPENDENCIES:
+  - TFHpple
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - TFHpple
+
+SPEC CHECKSUMS:
+  TFHpple: a916fe0799eb30aa29b2670d14d5868cdd3a5b81
+
+PODFILE CHECKSUM: 9a2204d9ec15d863addbf2101286ba4310371944
+
+COCOAPODS: 1.5.0
