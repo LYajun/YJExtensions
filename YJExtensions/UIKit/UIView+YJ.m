@@ -190,6 +190,25 @@
     self.frame = frame;
 }
 
+- (BOOL)yj_isIPhoneX{
+    if ((MIN([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) >= 375 &&
+         MAX([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) >= 812)) {
+        return YES;
+    }
+    return NO;
+}
+- (CGFloat)yj_stateBarSpace{
+     return ([self yj_isIPhoneX] ? 24 : 0);
+}
+- (CGFloat)yj_tabBarSpace{
+    return ([self yj_isIPhoneX] ? 34 : 0);
+}
+- (CGFloat)yj_customNavBarHeight{
+    return ([self yj_isIPhoneX] ? 88 : 64);
+}
+- (CGFloat)yj_customTabBarHeight{
+    return ([self yj_isIPhoneX] ? 83 : 49);
+}
 @end
 
 

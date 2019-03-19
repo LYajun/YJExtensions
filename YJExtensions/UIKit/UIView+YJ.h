@@ -50,12 +50,18 @@ typedef NS_ENUM(NSInteger, YJShakeDirection) {
 - (void)yj_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval completion:(void((^)(void)))handler;
 - (void)yj_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(YJShakeDirection)shakeDirection;
 - (void)yj_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(YJShakeDirection)shakeDirection completion:(void(^)(void))completion;
+
 #pragma mark - Frame
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
 
+- (BOOL)yj_isIPhoneX;
+- (CGFloat)yj_stateBarSpace;
+- (CGFloat)yj_tabBarSpace;
+- (CGFloat)yj_customNavBarHeight;
+- (CGFloat)yj_customTabBarHeight;
 @end
 
 NS_ASSUME_NONNULL_END

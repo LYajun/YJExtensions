@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YJExtensions"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "分类"
 
 
@@ -20,11 +20,21 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/LYajun/YJExtensions.git", :tag => s.version }
 
 
-  s.source_files  = "YJExtensions/YJExtensions.h","YJExtensions/Foundation/*.{h,m}","YJExtensions/UIKit/*.{h,m}"
+  s.source_files  = "YJExtensions/YJExtensions.h"
 
+  s.subspec "Foundation" do |ss|
+    ss.source_files =  "YJExtensions/Foundation/*.{h,m}"
+
+    ss.dependency "TFHpple"
+  end
+
+  s.subspec "UIKit" do |ss|
+    ss.source_files =  "YJExtensions/UIKit/*.{h,m}"
+    ss.dependency "YJExtensions/Foundation"
+   
+  end
 
 
   s.requires_arc = true
-  s.dependency "TFHpple"
 
 end
