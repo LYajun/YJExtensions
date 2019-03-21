@@ -16,6 +16,25 @@ static const void *YJBackButtonHandlerKey = &YJBackButtonHandlerKey;
 - (YJBackButtonHandler)yj_backButtonTouched{
     return objc_getAssociatedObject(self, YJBackButtonHandlerKey);
 }
+
++ (UIViewController *)yj_topControllerForController:(UIViewController *)controller{
+    NSLog(@"findTopController: %@", NSStringFromClass(controller.class));
+    UIViewController *nextController;
+    if (nextController == nil && [controller respondsToSelector:@selector(presentedViewController)]) {
+        nextController = [controller performSelector:@selector(presentedViewController)];
+    }
+    if (nextController == nil && [controller respondsToSelector:@selector(topViewController)]) {
+        nextController = [controller performSelector:@selector(topViewController)];
+    }
+    if (nextController == nil && [controller respondsToSelector:@selector(selectedViewController)]) {
+        nextController = [controller performSelector:@selector(selectedViewController)];
+    }
+    if (nextController) {
+        return [self yj_topControllerForController:nextController];
+    } else {
+        return controller;
+    }
+}
 @end
 
 @implementation UINavigationController (ShouldPopItem)

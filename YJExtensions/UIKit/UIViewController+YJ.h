@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void (^YJBackButtonHandler)(UIViewController *vc);
 @interface UIViewController (YJ)
 -(void)yj_backButtonTouched:(YJBackButtonHandler)backButtonHandler;
+
++ (UIViewController *)yj_topControllerForController:(UIViewController *)controller;
 @end
 
 NS_ASSUME_NONNULL_END

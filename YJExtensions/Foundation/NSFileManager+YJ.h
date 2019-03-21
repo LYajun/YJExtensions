@@ -63,6 +63,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 获取文件大小 */
 + (long long)yj_getFileSizeWithPath:(NSString *)path;
+
++ (NSString *)yj_sizeStringBy:(NSInteger)size;
 @end
 
 NS_ASSUME_NONNULL_END

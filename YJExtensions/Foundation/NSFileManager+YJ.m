@@ -199,4 +199,17 @@
     }
     return fileLength;
 }
+
++ (NSString *)yj_sizeStringBy:(NSInteger)size{
+    if (size > 1024 * 1024) {
+        float currentSize = size / 1024.0 / 1024.0;
+        return [NSString stringWithFormat:@"%.fM",currentSize];
+    }else if (size > 1024){
+        float currentSize = size / 1024.0 ;
+        return [NSString stringWithFormat:@"%.fKB",currentSize];
+    }else{
+        return [NSString stringWithFormat:@"%ziB",size];
+    }
+    
+}
 @end
