@@ -14,6 +14,7 @@ typedef void (^YJBackButtonHandler)(UIViewController *vc);
 -(void)yj_backButtonTouched:(YJBackButtonHandler)backButtonHandler;
 
 + (UIViewController *)yj_topControllerForController:(UIViewController *)controller;
+- (void)yj_popViewControllerByName:(NSString *)viewControllerName;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -35,6 +35,16 @@ static const void *YJBackButtonHandlerKey = &YJBackButtonHandlerKey;
         return controller;
     }
 }
+
+- (void)yj_popViewControllerByName:(NSString *)viewControllerName{
+    UINavigationController *navigationVC = self.navigationController;
+    for (UIViewController *vc in navigationVC.viewControllers) {
+        if ([vc isKindOfClass:NSClassFromString(viewControllerName)]) {
+            [navigationVC popToViewController:vc animated:YES];
+            break;
+        }
+    }
+}
 @end
 
 @implementation UINavigationController (ShouldPopItem)

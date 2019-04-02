@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIImage (YJ)
 
 #pragma mark - Bundle资源
-+ (UIImage *)yj_imageNamed:(NSString *)name atBundle:(NSString *)bundle;
-+ (UIImage *)yj_imageNamed:(NSString *)name atDir:(nullable NSString *)dir atBundle:(NSString *)bundle;
-+ (UIImage *)yj_animatedImageNamed:(NSString *)name atDir:(nullable NSString *)dir duration:(NSInteger)duration atBundle:(NSString *)bundle;
-+ (UIImage *)yj_imagePathName:(NSString *)name atBundle:(NSString *)bundle;
++ (UIImage *)yj_imageNamed:(NSString *)name;
++ (UIImage *)yj_imageNamed:(NSString *)name atDir:(nullable NSString *)dir;
++ (UIImage *)yj_animatedImageNamed:(NSString *)name atDir:(nullable NSString *)dir duration:(NSInteger)duration;
++ (UIImage *)yj_imagePathName:(NSString *)name;
 
 #pragma mark - UIView转UIImage
 + (UIImage *)yj_imageWithView:(UIView*)view;
