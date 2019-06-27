@@ -752,7 +752,12 @@
     return mdfiveString;
 }
 + (NSString *)yj_encryptWithKey:(NSString *)key encryptDic:(NSDictionary *)encryptDic{
-    NSData *jsData = [NSJSONSerialization dataWithJSONObject:encryptDic options:NSJSONWritingPrettyPrinted error:nil];
+    NSData *jsData;
+    if (@available(iOS 11.0, *)) {
+        jsData = [NSJSONSerialization dataWithJSONObject:encryptDic options:NSJSONWritingSortedKeys error:nil];
+    }else{
+        jsData = [NSJSONSerialization dataWithJSONObject:encryptDic options:NSJSONWritingPrettyPrinted error:nil];
+    }
     NSString *codeString = [[NSString alloc] initWithData:jsData encoding:NSUTF8StringEncoding];
     return [self yj_encryptWithKey:key encryptStr:codeString];
 }

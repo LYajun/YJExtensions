@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage *)yj_animatedImageNamed:(NSString *)name atDir:(nullable NSString *)dir duration:(NSInteger)duration atBundle:(NSBundle *)bundle;
 + (UIImage *)yj_imagePathName:(NSString *)name atBundle:(NSBundle *)bundle;
 
++ (UIImage *)yj_animatedGIFNamed:(NSString *)name;
+
 #pragma mark - UIView转UIImage
 + (UIImage *)yj_imageWithView:(UIView*)view;
 + (UIImage *)yj_imageWithColor:(UIColor *)color size:(CGSize)size;
