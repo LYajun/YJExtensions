@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YJExtensions"
-  s.version      = "1.0.9"
+  s.version      = "1.1.0"
   s.summary      = "分类"
 
 
@@ -22,17 +22,19 @@ Pod::Spec.new do |s|
 
   s.source_files  = "YJExtensions/YJExtensions.h"
 
+   s.subspec "UIKit" do |ss|
+    ss.source_files =  "YJExtensions/UIKit/*.{h,m}"
+    ss.dependency "YJExtensions/Foundation"
+   
+  end
+
   s.subspec "Foundation" do |ss|
     ss.source_files =  "YJExtensions/Foundation/*.{h,m}"
 
     ss.dependency "TFHpple"
   end
 
-  s.subspec "UIKit" do |ss|
-    ss.source_files =  "YJExtensions/UIKit/*.{h,m}"
-    ss.dependency "YJExtensions/Foundation"
-   
-  end
+ 
 
 
   s.requires_arc = true

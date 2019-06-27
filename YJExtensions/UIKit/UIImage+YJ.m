@@ -104,11 +104,12 @@
     return frameDuration;
 }
 
-+ (UIImage *)yj_animatedGIFNamed:(NSString *)name {
++ (UIImage *)yj_animatedGIFNamed:(NSString *)name atDir:(nonnull NSString *)dir atBundle:(nonnull NSBundle *)bundle{
+    name = [dir stringByAppendingPathComponent:name];
     CGFloat scale = [UIScreen mainScreen].scale;
     
     if (scale > 1.0f) {
-        NSString *retinaPath = [[NSBundle mainBundle] pathForResource:[name stringByAppendingFormat:@"@%.fx",scale] ofType:@"gif"];
+        NSString *retinaPath = [bundle pathForResource:[name stringByAppendingFormat:@"@%.fx",scale] ofType:@"gif"];
         
         NSData *data = [NSData dataWithContentsOfFile:retinaPath];
         
@@ -116,7 +117,7 @@
             return [UIImage yj_animatedGIFWithData:data];
         }
         
-        NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"gif"];
+        NSString *path = [bundle pathForResource:name ofType:@"gif"];
         
         data = [NSData dataWithContentsOfFile:path];
         
@@ -124,10 +125,10 @@
             return [UIImage yj_animatedGIFWithData:data];
         }
         
-        return [UIImage imageNamed:name];
+        return [UIImage yj_imageNamed:name atBundle:bundle];
     }
     else {
-        NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"gif"];
+        NSString *path = [bundle pathForResource:name ofType:@"gif"];
         
         NSData *data = [NSData dataWithContentsOfFile:path];
         
@@ -135,7 +136,7 @@
             return [UIImage yj_animatedGIFWithData:data];
         }
         
-        return [UIImage imageNamed:name];
+        return [UIImage yj_imageNamed:name atBundle:bundle];
     }
 }
 
@@ -159,6 +160,18 @@
     return image;
 }
 #pragma mark - UIImage处理
+-(UIImage *)yj_transformtoSize:(CGSize)Newsize{
+    // 创建一个bitmap的context
+    UIGraphicsBeginImageContext(Newsize);
+    // 绘制改变大小的图片
+    [self drawInRect:CGRectMake(0, 0, Newsize.width, Newsize.height)];
+    // 从当前context中创建一个改变大小后的图片
+    UIImage *TransformedImg=UIGraphicsGetImageFromCurrentImageContext();
+    // 使当前的context出堆栈
+    UIGraphicsEndImageContext();
+    // 返回新的改变大小后的图片
+    return TransformedImg;
+}
 + (UIImage *)yj_fixOrientation:(UIImage *)aImage{
     if (aImage.imageOrientation == UIImageOrientationUp)
         return aImage;
