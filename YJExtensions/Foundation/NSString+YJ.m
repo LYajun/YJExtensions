@@ -262,6 +262,10 @@
     }
     return html;
 }
++ (BOOL)predicateMatchWithText:(NSString *)text matchFormat:(NSString *)matchFormat{
+    NSPredicate * predicate = [NSPredicate predicateWithFormat: @"SELF MATCHES %@", matchFormat];
+    return [predicate evaluateWithObject:text];
+}
 #pragma mark - 尺寸
 - (CGFloat)yj_widthWithFont:(UIFont *)font{
     CGSize stringSize = [self boundingRectWithSize:CGSizeMake(MAXFLOAT, 30) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil].size;
@@ -352,7 +356,7 @@
         }else{
             return [NSString stringWithFormat:@"%02li:%02li",minute,second];
         }
-    }else if (timeInterval < 24*60*60){
+    }else{
         NSInteger hour = (NSInteger)timeInterval / (60*60);
         NSInteger minute = (NSInteger)timeInterval % (60*60) / 60;
         NSInteger second = (NSInteger)timeInterval % (60*60) % 60;
@@ -360,16 +364,6 @@
             return [NSString stringWithFormat:@"%li时%li分%02li秒",hour,minute,second];
         }else{
             return [NSString stringWithFormat:@"%02li:%02li:%02li",hour,minute,second];
-        }
-    }else{
-        NSInteger day = (NSInteger)timeInterval / (24*60*60);
-        NSInteger hour = (NSInteger)timeInterval % (24*60*60) / (60*60);
-        NSInteger minute = (NSInteger)timeInterval % (24*60*60) % (60*60) / 60;
-        NSInteger second = (NSInteger)timeInterval % (24*60*60) % (60*60) % 60;
-        if (isShowChinese) {
-            return [NSString stringWithFormat:@"%li天%li时%li分%02li秒",day,hour,minute,second];
-        }else{
-            return [NSString stringWithFormat:@"%02li:%02li:%02li:%02li",day,hour,minute,second];
         }
     }
 }
