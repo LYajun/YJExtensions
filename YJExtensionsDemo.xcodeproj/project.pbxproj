@@ -31,6 +31,7 @@
 		BA62A00A223B91E7000ED152 /* NSUserDefaults+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = BA629FF0223B91E7000ED152 /* NSUserDefaults+YJ.m */; };
 		BA62A00B223B91E7000ED152 /* NSString+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = BA629FF1223B91E7000ED152 /* NSString+YJ.m */; };
 		BA62A00C223B91E7000ED152 /* NSObject+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = BA629FF2223B91E7000ED152 /* NSObject+YJ.m */; };
+		BAC7D13322E581C200580E33 /* UIWebView+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC7D13222E581C200580E33 /* UIWebView+YJ.m */; };
 		BAF503BD223F6991009575D7 /* UIColor+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF503BC223F6991009575D7 /* UIColor+YJ.m */; };
 		C7E254ADE5CC07DE5C2DA64F /* Pods_YJExtensionsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DD9BDF49B7331485C8C07E /* Pods_YJExtensionsDemo.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,8 @@
 		BA629FF8223B91E7000ED152 /* NSDate+YJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YJ.h"; sourceTree = "<group>"; };
 		BA629FF9223B91E7000ED152 /* NSBundle+YJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+YJ.h"; sourceTree = "<group>"; };
 		BA629FFA223B91E7000ED152 /* YJExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJExtensions.h; sourceTree = "<group>"; };
+		BAC7D13122E581C200580E33 /* UIWebView+YJ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+YJ.h"; sourceTree = "<group>"; };
+		BAC7D13222E581C200580E33 /* UIWebView+YJ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+YJ.m"; sourceTree = "<group>"; };
 		BAF503BB223F6991009575D7 /* UIColor+YJ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+YJ.h"; sourceTree = "<group>"; };
 		BAF503BC223F6991009575D7 /* UIColor+YJ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YJ.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +188,8 @@
 				BA629FE3223B91E7000ED152 /* UIWindow+YJ.m */,
 				BAF503BB223F6991009575D7 /* UIColor+YJ.h */,
 				BAF503BC223F6991009575D7 /* UIColor+YJ.m */,
+				BAC7D13122E581C200580E33 /* UIWebView+YJ.h */,
+				BAC7D13222E581C200580E33 /* UIWebView+YJ.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				BA62A004223B91E7000ED152 /* NSMutableAttributedString+YJ.m in Sources */,
 				BA629FFB223B91E7000ED152 /* UIView+YJ.m in Sources */,
 				BA62A00C223B91E7000ED152 /* NSObject+YJ.m in Sources */,
+				BAC7D13322E581C200580E33 /* UIWebView+YJ.m in Sources */,
 				BA629FFF223B91E7000ED152 /* UIDevice+YJ.m in Sources */,
 				BA62A002223B91E7000ED152 /* UIWindow+YJ.m in Sources */,
 				BA62A005223B91E7000ED152 /* NSDictionary+YJ.m in Sources */,
