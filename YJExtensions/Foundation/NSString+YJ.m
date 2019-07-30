@@ -420,6 +420,19 @@
     }
     return displayTime;
 }
+#pragma mark - 编码、转码
+- (NSString *)yj_URLEncode{
+    return [self stringByRemovingPercentEncoding];
+}
+- (NSString *)yj_URLDecode{
+    NSMutableCharacterSet * allowedCharacterSet = [[NSCharacterSet URLQueryAllowedCharacterSet] mutableCopy];
+    [allowedCharacterSet removeCharactersInString:[kYJCharactersGeneralDelimitersToEncode stringByAppendingString:kYJCharactersSubDelimitersToEncode]];
+    NSString *URLEscapedString = [self stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacterSet];
+    return URLEscapedString;
+}
+- (NSString *)yj_URLQueryAllowedCharacterSet{
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+}
 @end
 
 @implementation NSString (Emo)
