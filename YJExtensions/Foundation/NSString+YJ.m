@@ -421,10 +421,10 @@
     return displayTime;
 }
 #pragma mark - 编码、转码
-- (NSString *)yj_URLEncode{
+- (NSString *)yj_URLDecode{
     return [self stringByRemovingPercentEncoding];
 }
-- (NSString *)yj_URLDecode{
+- (NSString *)yj_URLEncode{
     NSMutableCharacterSet * allowedCharacterSet = [[NSCharacterSet URLQueryAllowedCharacterSet] mutableCopy];
     [allowedCharacterSet removeCharactersInString:[kYJCharactersGeneralDelimitersToEncode stringByAppendingString:kYJCharactersSubDelimitersToEncode]];
     NSString *URLEscapedString = [self stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacterSet];
