@@ -69,6 +69,7 @@ typedef NS_ENUM(NSInteger, YJShakeDirection) {
 @property (nonatomic, assign) CGFloat left;
 @property (nonatomic, assign) CGFloat right;
 
+- (BOOL)yj_isIPAD;
 - (BOOL)yj_isIPhoneX;
 - (CGFloat)yj_stateBarSpace;
 - (CGFloat)yj_tabBarSpace;

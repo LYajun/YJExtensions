@@ -275,13 +275,25 @@
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (BOOL)yj_isIPhoneX{
-    if ((MIN([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) >= 375 &&
-         MAX([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) >= 812)) {
-        return YES;
-    }
-    return NO;
+- (BOOL)yj_isIPAD{
+    BOOL isIpad = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
+    return isIpad;
 }
+
+- (BOOL)yj_isIPhoneX{
+    BOOL iPhoneX = NO;
+    if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
+        return iPhoneX;
+    }
+    if (@available(iOS 11.0, *)) {
+        UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
+        if (mainWindow.safeAreaInsets.bottom > 0.0) {
+            iPhoneX = YES;
+        }
+    }
+    return iPhoneX;
+}
+
 - (CGFloat)yj_stateBarSpace{
      return ([self yj_isIPhoneX] ? 24 : 0);
 }

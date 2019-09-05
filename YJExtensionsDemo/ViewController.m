@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIImageView+YJ.h"
+#import "UIView+YJ.h"
 
 @interface ViewController ()
 
@@ -38,6 +39,10 @@
     imageViewSecond.image = [UIImage imageNamed:@"mac_dog"];
     imageViewThird.image = [UIImage imageNamed:@"mac_dog"];
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    NSLog(@"是否平板:%li",[self.view yj_isIPAD]);
+    NSLog(@"是否X:%li",[self.view yj_isIPhoneX]);
+}
 
 @end
