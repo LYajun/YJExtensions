@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YJExtensions"
-  s.version      = "1.1.6"
+  s.version      = "1.1.7"
   s.summary      = "分类"
 
 
