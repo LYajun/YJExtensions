@@ -23,10 +23,14 @@ static char * const yj_eventUnavailableKey = "eventUnavailableKey";
     method_exchangeImplementations(method, yj_method);
 }
 - (void)yj_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event{
-    if (self.eventUnavailable == NO) {
-        self.eventUnavailable = YES;
+    if (self.yj_eventInterval == 0) {
         [self yj_sendAction:action to:target forEvent:event];
-        [self performSelector:@selector(setEventUnavailable:) withObject:@(NO) afterDelay:self.yj_eventInterval];
+    }else{
+        if (self.eventUnavailable == NO) {
+            self.eventUnavailable = YES;
+            [self yj_sendAction:action to:target forEvent:event];
+            [self performSelector:@selector(setEventUnavailable:) withObject:@(NO) afterDelay:self.yj_eventInterval];
+        }
     }
 }
 

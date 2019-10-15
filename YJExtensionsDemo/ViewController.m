@@ -50,7 +50,7 @@
     [self.view addSubview:button];
     
     //! 设置按钮的点击响应间隔时间
-    button.yj_eventInterval = 2.0;
+//    button.yj_eventInterval = 2.0;
 }
 
 
