@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA1333E82355B1FB000665FA /* UIControl+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1333E72355B1FB000665FA /* UIControl+YJ.m */; };
 		BA629FBF223B9163000ED152 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA629FBE223B9163000ED152 /* AppDelegate.m */; };
 		BA629FC2223B9163000ED152 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA629FC1223B9163000ED152 /* ViewController.m */; };
 		BA629FC5223B9163000ED152 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA629FC3223B9163000ED152 /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 		3C71A74B2E71B0C6BD2C8CC4 /* Pods-YJExtensionsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YJExtensionsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YJExtensionsDemo/Pods-YJExtensionsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		76DD9BDF49B7331485C8C07E /* Pods_YJExtensionsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YJExtensionsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CEDE5240D1FE965C33D488 /* Pods-YJExtensionsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YJExtensionsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YJExtensionsDemo/Pods-YJExtensionsDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		BA1333E62355B1FB000665FA /* UIControl+YJ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+YJ.h"; sourceTree = "<group>"; };
+		BA1333E72355B1FB000665FA /* UIControl+YJ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+YJ.m"; sourceTree = "<group>"; };
 		BA629FBA223B9163000ED152 /* YJExtensionsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJExtensionsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA629FBD223B9163000ED152 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BA629FBE223B9163000ED152 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 				BA629FE3223B91E7000ED152 /* UIWindow+YJ.m */,
 				BAF503BB223F6991009575D7 /* UIColor+YJ.h */,
 				BAF503BC223F6991009575D7 /* UIColor+YJ.m */,
+				BA1333E62355B1FB000665FA /* UIControl+YJ.h */,
+				BA1333E72355B1FB000665FA /* UIControl+YJ.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 				BA62A000223B91E7000ED152 /* UINavigationBar+YJ.m in Sources */,
 				BA62A004223B91E7000ED152 /* NSMutableAttributedString+YJ.m in Sources */,
 				BA629FFB223B91E7000ED152 /* UIView+YJ.m in Sources */,
+				BA1333E82355B1FB000665FA /* UIControl+YJ.m in Sources */,
 				BA62A00C223B91E7000ED152 /* NSObject+YJ.m in Sources */,
 				BA629FFF223B91E7000ED152 /* UIDevice+YJ.m in Sources */,
 				BA62A002223B91E7000ED152 /* UIWindow+YJ.m in Sources */,

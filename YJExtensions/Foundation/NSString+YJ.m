@@ -14,6 +14,7 @@
 #define YJ_ASSOCIATIVE_CURRENT_DICTIONARY_KEY @"ASSOCIATIVE_CURRENT_DICTIONARY_KEY"
 #define YJ_ASSOCIATIVE_CURRENT_TEXT_KEY @"ASSOCIATIVE_CURRENT_TEXT_KEY"
 
+#define IsObjEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]))
 @interface NSString () <NSXMLParserDelegate>
 
 @property(nonatomic, retain)NSMutableArray *currentDictionaries;
@@ -763,6 +764,9 @@
 
 @implementation NSString (Encrypt)
 + (NSString *)yj_encryptWithKey:(NSString *)key encryptStr:(NSString *)encryptStr{
+    if (IsObjEmpty(key) || IsObjEmpty(encryptStr)) {
+        return @"";
+    }
     //转化skey
     NSString *keyAfterMD5 = [self yj_md5EncryptStr:key];
     NSData *keyData = [keyAfterMD5 dataUsingEncoding: NSUTF8StringEncoding];
@@ -783,6 +787,9 @@
     return reverseStrF;
 }
 + (NSString *)yj_md5EncryptStr:(NSString *)encryptStr{
+    if (IsObjEmpty(encryptStr)) {
+        return @"";
+    }
     const char *cStrValue = [encryptStr UTF8String];
     unsigned char result[CC_MD5_DIGEST_LENGTH];
     CC_MD5(cStrValue, (CC_LONG)strlen(cStrValue), result);
@@ -794,6 +801,9 @@
     return mdfiveString;
 }
 + (NSString *)yj_encryptWithKey:(NSString *)key encryptDic:(NSDictionary *)encryptDic{
+    if (IsObjEmpty(key) || IsObjEmpty(encryptDic)) {
+        return @"";
+    }
     NSData *jsData;
     if (@available(iOS 11.0, *)) {
         jsData = [NSJSONSerialization dataWithJSONObject:encryptDic options:NSJSONWritingSortedKeys error:nil];
@@ -805,6 +815,9 @@
 }
 
 + (NSString *)yj_decryptWithKey:(NSString *)key decryptStr:(NSString *)decryptStr{
+    if (IsObjEmpty(key) || IsObjEmpty(decryptStr)) {
+        return @"";
+    }
     //转化skey
     NSString *keyAfterMD5 = [self yj_md5EncryptStr:key];
     NSData *keyData = [keyAfterMD5 dataUsingEncoding: NSUTF8StringEncoding];
