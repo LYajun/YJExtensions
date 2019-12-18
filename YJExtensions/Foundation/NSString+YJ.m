@@ -65,6 +65,9 @@
 - (NSString *)yj_deleteWhitespaceCharacter{
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
+- (NSString *)yj_deleteWhitespaceAndNewlineCharacter{
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
 - (NSInteger)yj_stringToASCIIInt{
     return [self characterAtIndex:0];
 }

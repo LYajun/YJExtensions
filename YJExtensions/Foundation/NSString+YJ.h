@@ -21,6 +21,7 @@ static NSString * const kYJCharactersSubDelimitersToEncode = @"!$&'()*+,;=";
 
 - (NSString *)yj_fileExtensionName;
 - (NSString *)yj_deleteWhitespaceCharacter;
+- (NSString *)yj_deleteWhitespaceAndNewlineCharacter;
 - (NSInteger)yj_stringToASCIIInt;
 - (NSArray *)yj_splitToCharacters;
 #pragma mark - Xml

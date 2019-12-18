@@ -47,6 +47,7 @@
     button.frame = CGRectMake(30.0, self.view.bounds.size.height / 2, self.view.bounds.size.width - 30.0 * 2, 50.0);
     [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:@(0).stringValue forState:UIControlStateNormal];
+    button.exclusiveTouch = YES;
     [self.view addSubview:button];
     
     //! 设置按钮的点击响应间隔时间
