@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YJExtensions"
-  s.version      = "1.2.2"
+  s.version      = "1.2.3"
   s.summary      = "分类"
 
 
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'YJEHpple' do |hpple|
-    hpple.source_files = 'YJBaseModule/Classes/YJEHpple/**/*'
+    hpple.source_files = 'YJExtensions/Classes/YJEHpple/**/*'
     hpple.libraries  = 'xml2'
     hpple.xcconfig  =  {'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2'}
   end
