@@ -1,9 +1,5 @@
 //
-//  XPathQuery.m
-//  FuelFinder
-//
-//  Created by Matt Gallagher on 4/08/08.
-//  Copyright 2008 __MyCompanyName__. All rights reserved.
+//  Created by 刘亚军 on 2019/7/20.
 //
 
 #import "XPathQuery.h"

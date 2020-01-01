@@ -32,6 +32,10 @@
 		BA62A00A223B91E7000ED152 /* NSUserDefaults+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = BA629FF0223B91E7000ED152 /* NSUserDefaults+YJ.m */; };
 		BA62A00B223B91E7000ED152 /* NSString+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = BA629FF1223B91E7000ED152 /* NSString+YJ.m */; };
 		BA62A00C223B91E7000ED152 /* NSObject+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = BA629FF2223B91E7000ED152 /* NSObject+YJ.m */; };
+		BAF0FD2323BC7B61003A7ABD /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF0FD2023BC7B61003A7ABD /* XPathQuery.m */; };
+		BAF0FD2423BC7B61003A7ABD /* YJEHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF0FD2123BC7B61003A7ABD /* YJEHppleElement.m */; };
+		BAF0FD2523BC7B61003A7ABD /* YJEHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF0FD2223BC7B61003A7ABD /* YJEHpple.m */; };
+		BAF0FD2723BC7C2A003A7ABD /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF0FD2623BC7C2A003A7ABD /* libxml2.2.tbd */; };
 		BAF503BD223F6991009575D7 /* UIColor+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF503BC223F6991009575D7 /* UIColor+YJ.m */; };
 		C7E254ADE5CC07DE5C2DA64F /* Pods_YJExtensionsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DD9BDF49B7331485C8C07E /* Pods_YJExtensionsDemo.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +93,13 @@
 		BA629FF8223B91E7000ED152 /* NSDate+YJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YJ.h"; sourceTree = "<group>"; };
 		BA629FF9223B91E7000ED152 /* NSBundle+YJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+YJ.h"; sourceTree = "<group>"; };
 		BA629FFA223B91E7000ED152 /* YJExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJExtensions.h; sourceTree = "<group>"; };
+		BAF0FD1D23BC7B61003A7ABD /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		BAF0FD1E23BC7B61003A7ABD /* YJEHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJEHpple.h; sourceTree = "<group>"; };
+		BAF0FD1F23BC7B61003A7ABD /* YJEHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJEHppleElement.h; sourceTree = "<group>"; };
+		BAF0FD2023BC7B61003A7ABD /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		BAF0FD2123BC7B61003A7ABD /* YJEHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJEHppleElement.m; sourceTree = "<group>"; };
+		BAF0FD2223BC7B61003A7ABD /* YJEHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJEHpple.m; sourceTree = "<group>"; };
+		BAF0FD2623BC7C2A003A7ABD /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		BAF503BB223F6991009575D7 /* UIColor+YJ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+YJ.h"; sourceTree = "<group>"; };
 		BAF503BC223F6991009575D7 /* UIColor+YJ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YJ.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAF0FD2723BC7C2A003A7ABD /* libxml2.2.tbd in Frameworks */,
 				C7E254ADE5CC07DE5C2DA64F /* Pods_YJExtensionsDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +120,7 @@
 		9224C2A5B22A5532988CB5FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BAF0FD2623BC7C2A003A7ABD /* libxml2.2.tbd */,
 				76DD9BDF49B7331485C8C07E /* Pods_YJExtensionsDemo.framework */,
 			);
 			name = Frameworks;
@@ -160,6 +173,7 @@
 		BA629FD3223B91E7000ED152 /* YJExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				BAF0FD1C23BC7B61003A7ABD /* YJEHpple */,
 				BA629FD4223B91E7000ED152 /* UIKit */,
 				BA629FE5223B91E7000ED152 /* Foundation */,
 				BA629FFA223B91E7000ED152 /* YJExtensions.h */,
@@ -221,6 +235,19 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		BAF0FD1C23BC7B61003A7ABD /* YJEHpple */ = {
+			isa = PBXGroup;
+			children = (
+				BAF0FD1D23BC7B61003A7ABD /* XPathQuery.h */,
+				BAF0FD2023BC7B61003A7ABD /* XPathQuery.m */,
+				BAF0FD1E23BC7B61003A7ABD /* YJEHpple.h */,
+				BAF0FD2223BC7B61003A7ABD /* YJEHpple.m */,
+				BAF0FD1F23BC7B61003A7ABD /* YJEHppleElement.h */,
+				BAF0FD2123BC7B61003A7ABD /* YJEHppleElement.m */,
+			);
+			path = YJEHpple;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,7 +259,6 @@
 				BA629FB6223B9163000ED152 /* Sources */,
 				BA629FB7223B9163000ED152 /* Frameworks */,
 				BA629FB8223B9163000ED152 /* Resources */,
-				B284EE2E37DE8FA929ABC6F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,24 +315,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B284EE2E37DE8FA929ABC6F0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YJExtensionsDemo/Pods-YJExtensionsDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/TFHpple/TFHpple.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TFHpple.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YJExtensionsDemo/Pods-YJExtensionsDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CA5788DBC44ECF05407D857C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -342,7 +350,10 @@
 				BA62A009223B91E7000ED152 /* NSNumber+YJ.m in Sources */,
 				BA62A000223B91E7000ED152 /* UINavigationBar+YJ.m in Sources */,
 				BA62A004223B91E7000ED152 /* NSMutableAttributedString+YJ.m in Sources */,
+				BAF0FD2323BC7B61003A7ABD /* XPathQuery.m in Sources */,
 				BA629FFB223B91E7000ED152 /* UIView+YJ.m in Sources */,
+				BAF0FD2423BC7B61003A7ABD /* YJEHppleElement.m in Sources */,
+				BAF0FD2523BC7B61003A7ABD /* YJEHpple.m in Sources */,
 				BA1333E82355B1FB000665FA /* UIControl+YJ.m in Sources */,
 				BA62A00C223B91E7000ED152 /* NSObject+YJ.m in Sources */,
 				BA629FFF223B91E7000ED152 /* UIDevice+YJ.m in Sources */,
@@ -499,6 +510,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z35S33J39R;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = YJExtensionsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -517,6 +529,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z35S33J39R;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = YJExtensionsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
