@@ -84,6 +84,23 @@
     }
     return @[];
 }
++ (NSString *)yj_ChineseNumbersWithNumber:(NSInteger)number{
+    NSDictionary *numberDic = @{@"0":@"零",@"1":@"一",@"2":@"二",@"3":@"三",@"4":@"四",@"5":@"五",@"6":@"六",@"7":@"七",@"8":@"八",@"9":@"九",@"10":@"十",@"100":@"一百",@"1000":@"一千"};
+    NSString *numberStr = @"零";
+    if (number <= 10 || number == 100 || number == 1000) {
+        numberStr = [numberDic objectForKey:[NSString stringWithFormat:@"%li",number]];
+    }else if (number < 100){
+        NSInteger shi = number / 10;
+        NSInteger ge =  number % 10;
+        numberStr = [NSString stringWithFormat:@"%@十%@",[numberDic objectForKey:[NSString stringWithFormat:@"%li",shi]],[numberDic objectForKey:[NSString stringWithFormat:@"%li",ge]]] ;
+    }else if (number < 1000){
+        NSInteger bai = number / 100;
+        NSInteger shi = number % 100 / 10;
+        NSInteger ge =  number % 100 % 10;
+        numberStr = [NSString stringWithFormat:@"%@百%@十%@",[numberDic objectForKey:[NSString stringWithFormat:@"%li",bai]],[numberDic objectForKey:[NSString stringWithFormat:@"%li",shi]],[numberDic objectForKey:[NSString stringWithFormat:@"%li",ge]]] ;
+    }
+    return numberStr;
+}
 #pragma mark - Xml
 
 -(NSDictionary *)yj_XMLDictionary{

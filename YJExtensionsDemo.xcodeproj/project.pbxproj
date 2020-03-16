@@ -32,6 +32,7 @@
 		BA62A00A223B91E7000ED152 /* NSUserDefaults+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = BA629FF0223B91E7000ED152 /* NSUserDefaults+YJ.m */; };
 		BA62A00B223B91E7000ED152 /* NSString+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = BA629FF1223B91E7000ED152 /* NSString+YJ.m */; };
 		BA62A00C223B91E7000ED152 /* NSObject+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = BA629FF2223B91E7000ED152 /* NSObject+YJ.m */; };
+		BA82C76D241F474100B86D82 /* UISegmentedControl+YJ.m in Sources */ = {isa = PBXBuildFile; fileRef = BA82C76C241F474100B86D82 /* UISegmentedControl+YJ.m */; };
 		BAF0FD2323BC7B61003A7ABD /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF0FD2023BC7B61003A7ABD /* XPathQuery.m */; };
 		BAF0FD2423BC7B61003A7ABD /* YJEHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF0FD2123BC7B61003A7ABD /* YJEHppleElement.m */; };
 		BAF0FD2523BC7B61003A7ABD /* YJEHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF0FD2223BC7B61003A7ABD /* YJEHpple.m */; };
@@ -93,6 +94,8 @@
 		BA629FF8223B91E7000ED152 /* NSDate+YJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YJ.h"; sourceTree = "<group>"; };
 		BA629FF9223B91E7000ED152 /* NSBundle+YJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+YJ.h"; sourceTree = "<group>"; };
 		BA629FFA223B91E7000ED152 /* YJExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJExtensions.h; sourceTree = "<group>"; };
+		BA82C76B241F474100B86D82 /* UISegmentedControl+YJ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+YJ.h"; sourceTree = "<group>"; };
+		BA82C76C241F474100B86D82 /* UISegmentedControl+YJ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+YJ.m"; sourceTree = "<group>"; };
 		BAF0FD1D23BC7B61003A7ABD /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		BAF0FD1E23BC7B61003A7ABD /* YJEHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJEHpple.h; sourceTree = "<group>"; };
 		BAF0FD1F23BC7B61003A7ABD /* YJEHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJEHppleElement.h; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 				BAF503BC223F6991009575D7 /* UIColor+YJ.m */,
 				BA1333E62355B1FB000665FA /* UIControl+YJ.h */,
 				BA1333E72355B1FB000665FA /* UIControl+YJ.m */,
+				BA82C76B241F474100B86D82 /* UISegmentedControl+YJ.h */,
+				BA82C76C241F474100B86D82 /* UISegmentedControl+YJ.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 				BAF0FD2523BC7B61003A7ABD /* YJEHpple.m in Sources */,
 				BA1333E82355B1FB000665FA /* UIControl+YJ.m in Sources */,
 				BA62A00C223B91E7000ED152 /* NSObject+YJ.m in Sources */,
+				BA82C76D241F474100B86D82 /* UISegmentedControl+YJ.m in Sources */,
 				BA629FFF223B91E7000ED152 /* UIDevice+YJ.m in Sources */,
 				BA62A002223B91E7000ED152 /* UIWindow+YJ.m in Sources */,
 				BA62A005223B91E7000ED152 /* NSDictionary+YJ.m in Sources */,

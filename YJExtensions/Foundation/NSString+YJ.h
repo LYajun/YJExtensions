@@ -24,6 +24,8 @@ static NSString * const kYJCharactersSubDelimitersToEncode = @"!$&'()*+,;=";
 - (NSString *)yj_deleteWhitespaceAndNewlineCharacter;
 - (NSInteger)yj_stringToASCIIInt;
 - (NSArray *)yj_splitToCharacters;
++ (NSString *)yj_ChineseNumbersWithNumber:(NSInteger)number;
+
 #pragma mark - Xml
 /** xml字符串转换成NSDictionary */
 - (NSDictionary *)yj_XMLDictionary;
