@@ -76,6 +76,10 @@ static NSString * const kYJCharactersSubDelimitersToEncode = @"!$&'()*+,;=";
 - (NSString *)yj_URLDecode;
 - (NSString *)yj_URLEncode;
 - (NSString *)yj_URLQueryAllowedCharacterSet;
+- (NSString *)yj_htmlDecode;
++ (NSString *)yj_deleteURLDoubleSlashWithUrlStr:(NSString *)urlStr;
++ (BOOL)yj_isNum:(NSString *)checkedNumString;
++ (BOOL)yj_predicateMatchWithText:(NSString *)text matchFormat:(NSString *)matchFormat;
 @end
 
 @interface NSString (Emo)

@@ -10,6 +10,8 @@
 #import "UIImageView+YJ.h"
 #import "UIView+YJ.h"
 #import "YJExtensions.h"
+#import "YJEGumbo.h"
+#import "YJEGumbo+Query.h"
 
 @interface ViewController ()
 
@@ -19,6 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSString *htmlString = @"<html> <head><meta charset=\"{CHARSET}\"><title></title></head><body><p style=\"font-weight: bold;\">hollo hhkooisud</p><p id=\"0\" class=\"s\rt\" timeinfo=\"[00:00:24.790]\" style=\"border: 2px solid rgba(37,205,245,1);border-radius: 4px;\">Our school is far away from the downtown. As a result </p><p id=\"1\" class=\"srt\" timeinfo=\"[00:00:24.790]\" style=\"border: 2px solid rgba(37,205,245,1);\">it is a good place for students to study. We won’t be disturbed by the crowded people and the noise. For me </p><p id=\"2\" class=\"srt\" timeinfo=\"[00:00:24.790]\" style=\"border: 2px solid rgba(37,205,245,1);\">I like the scenery in the campus, trees are around, especially when I look out of the window in the break time. </p><script> var node = document.getElementById(\"0\"); node.style.border = \"2px solid red\";</script></body></html>";
+   YJEGumboDocument *document = [[YJEGumboDocument alloc] initWithHTMLString:htmlString];
+    ;
+   YJEGumboElement *element = document.Query(@".srt").firstObject;
+    
+    
 //    UIImageView *imageView = [[UIImageView alloc] initWithRoundingRectImageView];
 //    [imageView setFrame:CGRectMake(130, 80, 150, 150)];
 //    [self.view addSubview:imageView];
