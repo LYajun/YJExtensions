@@ -274,6 +274,10 @@ static inline NSDictionary *YJHTMLEscapeMap() {
             if (srcSuf && [srcSuf.lowercaseString containsString:@"gif"]) {
                 // gif 自适应
             }else{
+                if ([attributes.allKeys containsObject:@"style"]) {
+                       NSString *styleStr = [NSString stringWithFormat:@"style=\"%@\"",[attributes objectForKey:@"style"]];
+                       html = [html stringByReplacingOccurrencesOfString:styleStr withString:@""];
+                   }
                 CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
                 html = [NSString stringWithFormat:@"<html><head><style>img{max-width:%.f;height:auto !important;width:auto !important;};</style></head><body style='margin:0; padding:0;'>%@</body></html>",screenW-30, html];
             }
@@ -470,6 +474,9 @@ static inline NSDictionary *YJHTMLEscapeMap() {
     return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 }
 + (NSString *)yj_deleteURLDoubleSlashWithUrlStr:(NSString *)urlStr{
+    if (urlStr && urlStr.length > 0){
+        urlStr = [urlStr stringByRemovingPercentEncoding];
+    }
     if (urlStr && urlStr.length > 0 && [urlStr containsString:@"://"]) {
         NSArray *urlArr = [urlStr componentsSeparatedByString:@"://"];
        NSString *lastStr = [urlArr.lastObject stringByReplacingOccurrencesOfString:@"//" withString:@"/"];

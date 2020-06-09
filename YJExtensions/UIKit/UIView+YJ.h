@@ -77,6 +77,8 @@ typedef NS_ENUM(NSInteger, YJShakeDirection) {
 - (CGFloat)yj_tabBarSpace;
 - (CGFloat)yj_customNavBarHeight;
 - (CGFloat)yj_customTabBarHeight;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
