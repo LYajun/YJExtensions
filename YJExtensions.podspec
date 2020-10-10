@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YJExtensions"
-  s.version      = "1.3.0"
+  s.version      = "1.3.1"
   s.summary      = "分类"
 
 
@@ -42,11 +42,11 @@ Pod::Spec.new do |s|
     
   end
 
-  end
+end
 
   s.subspec "Foundation" do |ss|
     ss.source_files =  "YJExtensions/Foundation/*.{h,m}"
-
+    ss.dependency "YJExtensions/YJEGumbo"
     ss.dependency "YJExtensions/YJEHpple"
   end
 
